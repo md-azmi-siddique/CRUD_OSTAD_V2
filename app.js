@@ -28,10 +28,21 @@ app.use(mongoSanitize());
 app.use(bodyParser.json())
 
 //Rate Limiter
-const limiter = rateLimit({windowMs:15*60*100, max:3500});
+const limiter = rateLimit({windowMs:15*60*1000, max:3500});
 
 
-//Database Connect
+// Database Connect
+// let URI = "mongodb+srv://<username>:<password>@cluster0.2i4wmll.mongodb.net/CRUD_FOOD?retryWrites=true&w=majority"
+let URI = "mongodb+srv://<username>:<password>@cluster0.2i4wmll.mongodb.net/CRUD_FOOD?retryWrites=true&w=majority&appName=Cluster0"
+// let URI = "mongodb+srv://<username>:<password>@cluster0.2i4wmll.mongodb.net/CRUD_FOOD"
+let OPTION = {user:'mdazmisiddique', pass:'azmi28azmi',autoIndex:true}
+mongoose.connect(URI, OPTION)
+    .then(() => {
+        console.log("DB Connected");
+    })
+    .catch((error) => {
+        console.error("Error connecting to database:", error);
+    });
 
 
 
