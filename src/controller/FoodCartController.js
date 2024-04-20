@@ -1,4 +1,4 @@
-const FoodCartModel = require('./models/FoodCartModel');
+const FoodCartModel = require("../model/FoodCartModel");
 
 //create
 exports.CreateFoodCart = (req, res) => {
