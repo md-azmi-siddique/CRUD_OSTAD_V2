@@ -46,21 +46,17 @@ mongoose.connect(URI, OPTION)
 
 
 
-//Connect Frontend
-app.use(express.static("client/dist"))
+    app.set('etag', false);
 
-//ADD Frontend routing
-app.use('*', (req,res)=>{
-    res.sendFile(path.resolve(__dirname,'client','dist','index.html'))
-})
-
-//access api
-app.use("/api/v1", router);
-
-
-
-
-
-
-
-module.exports = app;
+    app.use("/api/v1",router)
+    app.use(express.static('client/dist'));
+    
+    
+    
+    // Add React Front End Routing
+    app.get('*',function (req,res) {
+        res.sendFile(path.resolve(__dirname,'client','dist','index.html'))
+    })
+    
+    
+    module.exports=app;
