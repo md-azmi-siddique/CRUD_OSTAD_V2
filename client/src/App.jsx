@@ -1,11 +1,13 @@
 // import React from 'react';
 
-import Home from "./pages/Home";
+
+
+import ReadPage from "./pages/ReadPage.jsx";
 
 const App = () => {
   return (
     <div className="container">
-      <Home/>
+      <ReadPage/>
     </div>
   );
 };
