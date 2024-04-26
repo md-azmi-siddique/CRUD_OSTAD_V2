@@ -30,7 +30,7 @@ const ReadPage = () => {
 
     return (
         <MasterLayout>
-            <div className="row">
+            <div className="row container">
                 <div className="col-md-3">
                     <h2>First Part</h2>
                     <div className="row">
