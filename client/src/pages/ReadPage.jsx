@@ -62,7 +62,7 @@ const ReadPage = () => {
                                             </Card.Body>
                                             <div className="row">
                                                 <div className="col-md-6">
-                                                    <button className="btn btn-success">Update</button>
+                                                    <Link to={`/update/${item['_id']}`} className="btn btn-success">Update</Link>
                                                 </div>
                                                 <div className="col-md-6 d-flex justify-content-end">
                                                     <button onClick={() => DeleteFood(item._id)}

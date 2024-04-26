@@ -21,6 +21,16 @@ exports.Read=async(req,res)=>{
     }
 }
 
+exports.ReadId=async(req,res)=>{
+    try{
+        let {id} = req.params;
+        let rows=await FoodCartModel.find({_id:id});
+        return res.status(200).json({status:"success",message:"Request Completed",row:rows});
+    }catch (e) {
+        return res.status(200).json({err:e.toString()})
+    }
+}
+
 //Update
 exports.Update=async(req,res)=>{
     try{
