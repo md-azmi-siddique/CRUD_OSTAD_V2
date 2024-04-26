@@ -55,9 +55,10 @@ const ReadPage = () => {
                                             <Card.Body>
                                                 <Card.Title>{item.foodName}</Card.Title>
                                                 <Card.Text>
-                                                    This is a longer card with supporting text below as a natural
-                                                    lead-in to additional content. This content is a little bit
-                                                    longer.
+                                                    <div className="row">
+                                                        <div className="col-md-6">Quantity: {item.foodQuantity}</div>
+                                                        <div className="col-md-6">Price: {item.foodPrice}</div>
+                                                    </div>
                                                 </Card.Text>
                                             </Card.Body>
                                             <div className="row">

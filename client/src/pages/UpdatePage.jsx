@@ -38,7 +38,7 @@ const UpdatePage = () => {
         let foodQuantity = formData.get("foodQuantity");
         let foodPrice = formData.get("foodPrice");
 
-        await axios.post("http://localhost:5050/api/Create", {
+        await axios.post(`http://localhost:5050/api/Update/${id}`, {
             foodName: foodName,
             foodCode: foodCode,
             foodImg: foodImg,
